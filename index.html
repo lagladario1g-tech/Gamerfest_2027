@@ -10,6 +10,15 @@
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Mobile First: (375 px) y 1440 px (vista de escritorio) -->
+    <style>
+        @media (min-width: 1440px) {
+            .lead {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-black text-light">
@@ -22,10 +31,10 @@
             <div class="container">
 
                 <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
-                    <!-- IMAGEN: logo (cuadrado 1:1) -->
+                    <!-- IMAGEN: logo -->
                     <img src="images/logo.png" alt="Logotipo de Gamer Fest ESPE 2027"
-                         width="44" height="44" class="rounded-circle border border-info border-opacity-75">
-                    <span class="fw-bolder fs-6 text-uppercase text-white">Gamer Fest <span class="text-info">ESPE 2027</span></span>
+                         width="44" height="44" class="img-fluid rounded-circle border border-info border-opacity-75">
+                    <span class="fw-bolder fs-6 text-uppercase text-white text-wrap">Gamer Fest <span class="text-info">ESPE 2027</span></span>
                 </a>
 
                 <!-- Boton hamburguesa (visible bajo lg) -->
@@ -57,11 +66,12 @@
         <!-- ===================== 2. HERO / INVITACION ===================== -->
         <section id="inicio" class="position-relative overflow-hidden bg-black border-bottom border-info border-opacity-25">
 
-            <!-- Fondo: la misma foto, desvanecida -->
-            <img src="images/hero.jpg" alt="" aria-hidden="true"
-                 class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-25">
+            <!-- Fondo -->
+            <img src="images/hero3.jpg" alt="" aria-hidden="true"
+                 class="img-fluid position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-25"
+                 style="-webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent); mask-image: linear-gradient(to bottom, #000 45%, transparent);">
 
-            <!-- Capa oscura para fundir los bordes de la foto con el negro -->
+            <!-- Capa oscura para difuminar el fondo -->
             <div class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50" aria-hidden="true"></div>
 
             <div class="container position-relative py-5">
@@ -69,7 +79,7 @@
 
                     <!-- Texto  -->
                     <div class="col-12 col-lg-6">
-                        <span class="badge rounded-pill text-bg-info bg-opacity-100 mb-3 px-3 py-2 text-uppercase">Inscripciones abiertas hasta el 31 de octubre</span>
+                        <span class="badge rounded-pill text-bg-info bg-opacity-100 mb-3 px-3 py-2 text-uppercase text-wrap">Inscripciones abiertas hasta el 31 de octubre</span>
                         <h1 class="display-3 fw-bolder text-uppercase text-white lh-1 d-block mb-4">
                             <span class="d-inline-block border-bottom border-4 border-warning pb-3">Gamer Fest <span class="text-info">ESPE 2027</span></span>
                         </h1>
@@ -82,7 +92,7 @@
                             son limitados, así que asegura tu lugar antes del cierre de inscripciones.
                         </p>
 
-                        <!-- Datos logísticos: apilados en móvil-->
+                        <!-- Datos logisticos: apilados en movil-->
                         <div class="row row-cols-1 row-cols-sm-3 g-2 mb-4">
                             <div class="col">
                                 <div class="card h-100 bg-info bg-opacity-10 border-info border-opacity-50 rounded-4">
@@ -110,18 +120,19 @@
                             </div>
                         </div>
 
-                        <!-- Botón con aro suave (efecto brillo) -->
-                        <div class="d-grid d-lg-inline-grid p-1 rounded-pill bg-warning bg-opacity-25">
-                            <a href="#inscripcion" class="btn btn-warning btn-lg fw-bolder text-uppercase rounded-pill px-5">
+                        <!-- Boton -->
+                        <div class="d-grid d-lg-inline-grid p-1 rounded-pill bg-warning bg-opacity-25"
+                             style="box-shadow: 0 0 24px rgba(255, 193, 7, .45);">
+                            <a href="#inscripcion" class="btn btn-warning btn-lg fw-bolder text-uppercase rounded-pill px-4 px-sm-5">
                                 Inscríbete ahora
                             </a>
                         </div>
                     </div>
 
-                    <!-- IMAGEN:  Móvil: debajo del texto. Escritorio: a la derecha -->
+                    <!-- IMAGEN:  Movil: debajo del texto. Escritorio: a la derecha -->
                     <div class="col-12 col-lg-6">
-                        <!-- Marco exterior translúcido: simula el borde difuminado -->
-                        <div class="p-2 p-lg-3 rounded-5 bg-info bg-opacity-10 border border-info border-opacity-25">
+                        <div class="p-2 p-lg-3 rounded-5 bg-info bg-opacity-10 border border-info border-opacity-25"
+                             style="box-shadow: 0 0 40px rgba(13, 202, 240, .35);">
                             <div class="ratio ratio-4x3 bg-black rounded-4 overflow-hidden border border-info border-opacity-75 border-2">
                                 <img src="images/hero.jpg"
                                      alt="Arena de esports con pantalla curva gigante, teclados amarillos y luces de neón"
@@ -168,7 +179,7 @@
                     <div class="col">
                         <article class="card h-100 bg-info bg-opacity-10 border-info border-opacity-50 rounded-5 overflow-hidden">
                             <div class="ratio ratio-4x3 bg-black">
-                                <img src="images/cat-carreras.jpg"
+                                <img src="images/cat-carreras2.jpg"
                                      alt="Dos autos futuristas, uno cian y otro amarillo, compitiendo a toda velocidad, categoría Carreras"
                                      class="img-fluid object-fit-cover card-img-top" loading="lazy">
                             </div>
@@ -243,7 +254,7 @@
 
                     <!-- 1.er lugar -->
                     <div class="col order-lg-2">
-                        <div class="p-1 rounded-5 bg-warning bg-opacity-25">
+                        <div class="p-1 rounded-5 bg-warning bg-opacity-25" style="box-shadow: 0 0 30px rgba(255, 193, 7, .35);">
                             <article class="card bg-black bg-opacity-75 border-warning border-2 rounded-5 overflow-hidden">
                                 <div class="row g-0 align-items-center">
                                     <div class="col-4">
@@ -399,127 +410,150 @@
         </section>
 
 
-        <!-- ===================== 6. UBICACION / MAPA ===================== -->
-        <section id="ubicacion" class="bg-primary-subtle border-top border-bottom border-info border-opacity-25">
+        <!-- ===================== 6 y 7. UBICACION (izquierda) + INSCRIPCION (derecha) ===================== -->
+        <div class="bg-primary-subtle border-top border-bottom border-info border-opacity-25">
             <div class="container py-5">
-                <h2 class="display-6 fw-bolder text-info text-uppercase d-inline-block border-bottom border-4 border-warning pb-2 mb-4">¿Dónde será?</h2>
+                <div class="row g-5">
 
-                <div class="p-1 rounded-5 bg-info bg-opacity-25">
-                    <div class="card bg-black border-info border-opacity-50 border-2 rounded-5 overflow-hidden">
+                    <!-- ===== 6. UBICACION / MAPA (columna izquierda) ===== -->
+                    <section id="ubicacion" class="col-12 col-lg-6 d-flex flex-column">
+                        <h2 class="display-6 fw-bolder text-info text-uppercase d-inline-block align-self-start border-bottom border-4 border-warning pb-2 mb-4">Ubicación</h2>
 
-                        <!-- Mapa: ocupa el ancho del contenedor -->
-                        <div class="ratio ratio-16x9">
-                            <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26835.96519375123!2d-78.59785288967534!3d-1.0167755250903507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4639e7c398d3f%3A0xc4999bdc40abfc48!2sUniversidad%20De%20Las%20Fuerzas%20Armadas%20ESPE%20Extensi%C3%B3n%20Belisario%20Quevedo!5e0!3m2!1ses-419!2sec!4v1793235951107!5m2!1ses-419!2sec"
-                            title="Mapa del Campus Belisario Quevedo, ESPE" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                        </div>
+                        <div class="p-1 rounded-5 bg-info bg-opacity-25 flex-grow-1">
+                            <div class="card h-100 bg-black border-info border-opacity-50 border-2 rounded-5 overflow-hidden">
 
-                        <!-- Respaldo textual  -->
-                        <div class="card-body p-4">
-                            <div class="row align-items-center g-4">
-
-                                <!-- Logo ESPE (estilo neón) junto al texto sobre la institución -->
-                                <div class="col-6 col-sm-4 col-lg-2 mx-auto mx-lg-0">
-                                    <img src="images/espe-neon.jpg"
-                                         alt="Emblema ESPE con escudo, laureles cian y estrella amarilla"
-                                         class="img-fluid rounded-5 border border-info border-opacity-25" loading="lazy">
+                                <!-- Mapa: ocupa el ancho de la columna -->
+                                <div class="ratio ratio-16x9">
+                                    <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26835.96519375123!2d-78.59785288967534!3d-1.0167755250903507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4639e7c398d3f%3A0xc4999bdc40abfc48!2sUniversidad%20De%20Las%20Fuerzas%20Armadas%20ESPE%20Extensi%C3%B3n%20Belisario%20Quevedo!5e0!3m2!1ses-419!2sec!4v1793235951107!5m2!1ses-419!2sec"
+                                    title="Mapa del Campus Belisario Quevedo, ESPE" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                                 </div>
 
-                                <div class="col-12 col-lg-10">
-                                    <h3 class="h5 text-warning fw-bolder text-uppercase">Campus Belisario Quevedo, ESPE</h3>
-                                    <p>
-                                        El Gamer Fest ESPE 2027 se realizará en el <strong>Campus Belisario Quevedo de la
-                                        Universidad de las Fuerzas Armadas ESPE</strong>, en Latacunga. Habrá zonas de
-                                        competencia, un escenario principal y un área de descanso para los participantes.
-                                    </p>
-                                    <ul class="list-unstyled mb-3">
-                                        <li><span class="text-warning fw-bold">Dirección:</span> Campus Belisario Quevedo, ESPE · Latacunga, Cotopaxi</li>
-                                        <li><span class="text-warning fw-bold">Acreditación:</span> desde las 08:30</li>
-                                        <li><span class="text-warning fw-bold">Inicio de la jornada:</span> 09:00</li>
-                                    </ul>
-                                    <p class="small text-body-secondary mb-2">¿No carga el mapa? Ábrelo directamente en Google Maps.</p>
-                                    <a class="btn btn-outline-info btn-sm rounded-pill px-3"
-                                       href="https://www.google.com/maps/search/?api=1&query=ESPE+Belisario+Quevedo+Latacunga"
-                                       target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a>
+                                <!-- UBICACION TEXTUAL  -->
+                                <div class="card-body p-4">
+                                    <div class="row align-items-center g-4">
+
+                                        <!-- Logo ESPE NEON -->
+                                        <div class="col-6 col-sm-4 col-lg-3 mx-auto mx-lg-0">
+                                            <img src="images/espe-neon.jpg"
+                                                 alt="Emblema ESPE con escudo, laureles cian y estrella amarilla"
+                                                 class="img-fluid rounded-5 border border-info border-opacity-25" loading="lazy">
+                                        </div>
+
+                                        <div class="col-12 col-lg-9">
+                                            <h3 class="h5 text-warning fw-bolder text-uppercase">Campus Belisario Quevedo, ESPE</h3>
+                                            <p>
+                                                El Gamer Fest ESPE 2027 se realizará en el <strong>Campus Belisario Quevedo de la
+                                                Universidad de las Fuerzas Armadas ESPE</strong>, en Latacunga. Habrá zonas de
+                                                competencia, un escenario principal y un área de descanso para los participantes.
+                                            </p>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <ul class="list-unstyled mb-3">
+                                                <li><span class="text-warning fw-bold">Dirección:</span> Campus Belisario Quevedo, ESPE · Latacunga, Cotopaxi</li>
+                                                <li><span class="text-warning fw-bold">Acreditación:</span> desde las 08:30</li>
+                                                <li><span class="text-warning fw-bold">Inicio de la jornada:</span> 09:00</li>
+                                            </ul>
+                                            <p class="small text-body-secondary mb-2">¿No carga el mapa? Ábrelo directamente en Google Maps.</p>
+                                            <a class="btn btn-outline-info btn-sm rounded-pill px-3"
+                                               href="https://www.google.com/maps/search/?api=1&query=ESPE+Belisario+Quevedo+Latacunga"
+                                               target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a>
+                                        </div>
+
+                                    </div>
                                 </div>
 
                             </div>
                         </div>
+                    </section>
 
-                    </div>
+
+                    <!-- ===== 7. INSCRIPCION (columna derecha) ===== -->
+                    <section id="inscripcion" class="col-12 col-lg-6 d-flex flex-column">
+                        <h2 class="display-6 fw-bolder text-info text-uppercase d-inline-block align-self-start border-bottom border-4 border-warning pb-2 mb-3">Inscripción</h2>
+                        <p class="text-body-secondary mb-4">
+                            Inscríbete hasta el 31 de octubre de 2027 o hasta agotar los cupos de tu categoría.
+                        </p>
+
+                        <!-- Información previa: -->
+                        <div class="row row-cols-1 g-3 mb-4">
+
+                            <!-- Paso 1 -->
+                            <div class="col">
+                                <article class="card h-100 bg-info bg-opacity-10 border-info border-opacity-50 rounded-5">
+                                    <div class="card-body">
+                                        <span class="badge rounded-pill text-bg-warning bg-opacity-100 mb-2">Paso 1</span>
+                                        <h3 class="h6 text-warning fw-bolder text-uppercase">Verifica que puedas participar</h3>
+                                        <p class="small mb-0">Estudiantes, docentes y personal de la ESPE con correo institucional (@espe.edu.ec).</p>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Paso 2 -->
+                            <div class="col">
+                                <article class="card h-100 bg-info bg-opacity-10 border-info border-opacity-50 rounded-5">
+                                    <div class="card-body">
+                                        <span class="badge rounded-pill text-bg-warning bg-opacity-100 mb-2">Paso 2</span>
+                                        <h3 class="h6 text-warning fw-bolder text-uppercase">Realiza el pago</h3>
+                                        <p class="small mb-0">$3 por jugador, por transferencia o en la caja de la institución.</p>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Paso 3 -->
+                            <div class="col">
+                                <article class="card h-100 bg-info bg-opacity-10 border-info border-opacity-50 rounded-5">
+                                    <div class="card-body">
+                                        <span class="badge rounded-pill text-bg-warning bg-opacity-100 mb-2">Paso 3</span>
+                                        <h3 class="h6 text-warning fw-bolder text-uppercase">Adjunta tu comprobante</h3>
+                                        <p class="small mb-0">Sube la foto o el PDF del comprobante (máx. 2 MB). Te confirmamos tu cupo por WhatsApp.</p>
+                                    </div>
+                                </article>
+                            </div>
+
+                        </div>
+
+                        <div class="p-1 rounded-5 bg-info bg-opacity-25 flex-grow-1">
+                            <div class="card h-100 bg-black border-info border-opacity-75 border-2 rounded-5">
+                                <div class="card-body p-4">
+
+                                    <h3 class="h5 text-warning fw-bolder text-uppercase mb-3">Formulario de inscripción</h3>
+
+                                    <!--
+                                        se completa en clase.
+                                        
+                                    -->
+                                    <form>
+                                        <div class="row g-3">
+
+                                            <!-- Fila 1 -->
+                                            <div class="col-12 col-lg-6">
+ 
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+  
+                                            </div>
+
+                                            <!-- Fila 2 -->
+                                            <div class="col-12 col-lg-6">
+
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+
+                                            </div>
+
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
             </div>
-        </section>
-
-
-        <!-- ===================== 7. INSCRIPCION ===================== -->
-        <section id="inscripcion" class="bg-black">
-            <div class="container py-5">
-                <h2 class="display-6 fw-bolder text-info text-uppercase d-inline-block border-bottom border-4 border-warning pb-2 mb-3">Inscripción</h2>
-                <p class="text-body-secondary mb-4">
-                    Inscríbete hasta el 31 de octubre de 2027 o hasta agotar los cupos de tu categoría.
-                </p>
-
-                <!-- Información previa: tres pasos (reemplaza al acordeón) -->
-                <div class="row row-cols-1 row-cols-lg-3 g-3 mb-4">
-
-                    <!-- Paso 1 -->
-                    <div class="col">
-                        <article class="card h-100 bg-info bg-opacity-10 border-info border-opacity-50 rounded-5">
-                            <div class="card-body">
-                                <span class="badge rounded-pill text-bg-warning bg-opacity-100 mb-2">Paso 1</span>
-                                <h3 class="h6 text-warning fw-bolder text-uppercase">Verifica que puedas participar</h3>
-                                <p class="small mb-0">Estudiantes, docentes y personal de la ESPE con correo institucional (@espe.edu.ec).</p>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Paso 2 -->
-                    <div class="col">
-                        <article class="card h-100 bg-info bg-opacity-10 border-info border-opacity-50 rounded-5">
-                            <div class="card-body">
-                                <span class="badge rounded-pill text-bg-warning bg-opacity-100 mb-2">Paso 2</span>
-                                <h3 class="h6 text-warning fw-bolder text-uppercase">Realiza el pago</h3>
-                                <p class="small mb-0">$3 por jugador, por transferencia o en la caja de la institución.</p>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Paso 3 -->
-                    <div class="col">
-                        <article class="card h-100 bg-info bg-opacity-10 border-info border-opacity-50 rounded-5">
-                            <div class="card-body">
-                                <span class="badge rounded-pill text-bg-warning bg-opacity-100 mb-2">Paso 3</span>
-                                <h3 class="h6 text-warning fw-bolder text-uppercase">Adjunta tu comprobante</h3>
-                                <p class="small mb-0">Sube la foto o el PDF del comprobante (máx. 2 MB). Te confirmamos tu cupo por WhatsApp.</p>
-                            </div>
-                        </article>
-                    </div>
-
-                </div>
-
-                <div class="p-1 rounded-5 bg-info bg-opacity-25">
-                    <div class="card bg-black border-info border-opacity-75 border-2 rounded-5">
-                        <div class="card-body p-4">
-
-                            <h3 class="h5 text-warning fw-bolder text-uppercase mb-3">Formulario de inscripción</h3>
-
-                            <!--
-                            se completa en clase.
-                            -->
-                            <form>
-                                <div class="row g-3">
-
-                                    <!-- Aquí van los campos -->
-
-                                </div>
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
 
     </main>
 
@@ -542,17 +576,17 @@
                     <ul class="list-inline mb-0 text-lg-end">
                         <li class="list-inline-item me-3">
                             <a href="#" aria-label="Instagram de Gamer Fest ESPE 2027" title="Instagram">
-                                <img src="images/red-instagram.png" alt="Instagram" width="48" height="48" class="rounded-4">
+                                <img src="images/red-instagram.png" alt="Instagram" width="48" height="48" class="img-fluid rounded-4">
                             </a>
                         </li>
                         <li class="list-inline-item me-3">
                             <a href="#" aria-label="Facebook de Gamer Fest ESPE 2027" title="Facebook">
-                                <img src="images/red-facebook.png" alt="Facebook" width="48" height="48" class="rounded-circle">
+                                <img src="images/red-facebook.png" alt="Facebook" width="48" height="48" class="img-fluid rounded-circle">
                             </a>
                         </li>
                         <li class="list-inline-item me-0">
                             <a href="#" aria-label="TikTok de Gamer Fest ESPE 2027" title="TikTok">
-                                <img src="images/red-tiktok.png" alt="TikTok" width="48" height="48" class="rounded-circle border border-secondary">
+                                <img src="images/red-tiktok.png" alt="TikTok" width="48" height="48" class="img-fluid rounded-circle border border-secondary">
                             </a>
                         </li>
                     </ul>
