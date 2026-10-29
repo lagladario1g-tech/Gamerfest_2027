@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gamer Fest ESPE 2027: torneo universitario de videojuegos. 15 de mayo de 2027, Campus Belisario Quevedo.">
+
+    <title>Gamer Fest ESPE 2027</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-black text-light">
+
+    <!-- ===================== 1. ENCABEZADO + NAVBAR ===================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-info border-2">
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+                    <!-- IMAGEN: logo (cuadrado 1:1) -->
+                    <img src="images/logo.png" alt="Logotipo de Gamer Fest ESPE 2027"
+                         width="44" height="44" class="rounded-3 bg-secondary">
+                    <span class="fw-bold fs-6 text-info">GAMER FEST ESPE 2027</span>
+                </a>
+
+                <!-- Boton hamburguesa (visible bajo lg) -->
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                        aria-controls="menuPrincipal" aria-expanded="false"
+                        aria-label="Abrir o cerrar el menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#premios">Premios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#auspiciantes">Auspiciantes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#inscripcion">Inscripción</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- ===================== 2. HERO / INVITACION ===================== -->
+        <section id="inicio" class="bg-dark bg-gradient border-bottom border-info border-opacity-25">
+            <div class="container py-4 py-lg-5">
+                <div class="row align-items-center g-4">
+
+                    <!-- Texto  -->
+                    <div class="col-12 col-lg-6">
+                        <span class="badge rounded-pill text-bg-warning mb-3">Inscripciones abiertas hasta el 30 de abril</span>
+                        <h1 class="display-4 fw-bold mb-3">GAMER FEST ESPE 2027</h1>
+                        <p class="lead">
+                            El torneo de videojuegos de la comunidad universitaria. Una jornada completa de
+                            competencia, cuatro categorías y premios para los mejores jugadores.
+                        </p>
+                        <p>
+                            Reúne a tu equipo, elige tu categoría y demuestra de qué estás hecho. Los cupos
+                            son limitados, así que asegura tu lugar antes del cierre de inscripciones.
+                        </p>
+
+                        <!-- Datos logísticos: apilados en móvil-->
+                        <div class="row row-cols-1 row-cols-sm-3 g-2 mb-4">
+                            <div class="col">
+                                <div class="h-100 p-2 px-3 rounded-3 border border-info-subtle bg-black bg-opacity-50">
+                                    <div class="small text-warning fw-bold text-uppercase">Fecha</div>
+                                    <div>Sábado 15 de mayo de 2027</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="h-100 p-2 px-3 rounded-3 border border-info-subtle bg-black bg-opacity-50">
+                                    <div class="small text-warning fw-bold text-uppercase">Horario</div>
+                                    <div>09:00 a 18:00</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="h-100 p-2 px-3 rounded-3 border border-info-subtle bg-black bg-opacity-50">
+                                    <div class="small text-warning fw-bold text-uppercase">Lugar</div>
+                                    <div>Campus Belisario Quevedo, ESPE · Latacunga</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-grid d-lg-block">
+                            <a href="#inscripcion" class="btn btn-warning btn-lg fw-bold px-5">
+                                Inscríbete ahora
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- IMAGEN:  Móvil: debajo del texto. Escritorio: a la derecha -->
+                    <div class="col-12 col-lg-6">
+                        <div class="ratio ratio-4x3 bg-secondary rounded-4 overflow-hidden border border-info border-3">
+                            <img src="images/hero.jpg"
+                                 alt="Torneo de videojuegos en un coliseo con pantallas gigantes y luces de neón"
+                                 class="img-fluid object-fit-cover">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================== 3. CATEGORIAS ===================== -->
+        <section id="categorias">
+            <div class="container py-4 py-lg-5">
+                <h2 class="fw-bold text-info border-start border-4 border-warning ps-3 mb-2">Categorías de juego</h2>
+                <p class="text-body-secondary mb-4">Elige tu categoría y compite por un lugar en el podio.</p>
+
+                <div class="row row-cols-1 row-cols-lg-4 g-4">
+
+                    <!-- Categoria 1 -->
+                    <div class="col">
+                        <article class="card h-100 bg-dark border-info overflow-hidden">
+                            <div class="ratio ratio-4x3 bg-secondary">
+                                <img src="images/cat-battle-royale.jpg"
+                                     alt="Mapa de una isla futurista con una zona roja que se reduce, categoría Battle Royale"
+                                     class="img-fluid object-fit-cover card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h5 card-title text-warning">Battle Royale</h3>
+                                <p class="card-text">
+                                    Sobrevive hasta ser el último jugador en pie en un mapa que se reduce.
+                                    Rondas eliminatorias y gran final.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-info-subtle">
+                                <div class="mb-1">Modalidad: <span class="badge rounded-pill text-bg-info">Individual</span></div>
+                                <div>Cupos: <span class="badge rounded-pill text-bg-warning">64 jugadores</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Categoria 2 -->
+                    <div class="col">
+                        <article class="card h-100 bg-dark border-info overflow-hidden">
+                            <div class="ratio ratio-4x3 bg-secondary">
+                                <img src="images/cat-carreras.jpg"
+                                     alt="Dos autos deportivos futuristas compitiendo en una pista de neón, categoría Carreras"
+                                     class="img-fluid object-fit-cover card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h5 card-title text-warning">Carreras</h3>
+                                <p class="card-text">
+                                    Duelos de velocidad por eliminación directa en circuitos de arcade.
+                                    Gana quien cruce primero la meta.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-info-subtle">
+                                <div class="mb-1">Modalidad: <span class="badge rounded-pill text-bg-info">1 contra 1</span></div>
+                                <div>Cupos: <span class="badge rounded-pill text-bg-warning">32 pilotos</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Categoria 3 -->
+                    <div class="col">
+                        <article class="card h-100 bg-dark border-info overflow-hidden">
+                            <div class="ratio ratio-4x3 bg-secondary">
+                                <img src="images/cat-futbol.jpg"
+                                     alt="Jugadores y balón luminoso en una cancha de fútbol virtual, categoría Fútbol virtual"
+                                     class="img-fluid object-fit-cover card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h5 card-title text-warning">Fútbol virtual</h3>
+                                <p class="card-text">
+                                    Forma tu dupla y compite en partidos cortos de fútbol.
+                                    Clasifican los mejores de cada grupo.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-info-subtle">
+                                <div class="mb-1">Modalidad: <span class="badge rounded-pill text-bg-info">Duplas</span></div>
+                                <div>Cupos: <span class="badge rounded-pill text-bg-warning">16 duplas</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Categoria 4 -->
+                    <div class="col">
+                        <article class="card h-100 bg-dark border-info overflow-hidden">
+                            <div class="ratio ratio-4x3 bg-secondary">
+                                <img src="images/cat-estrategia.jpg"
+                                     alt="Mapa de estrategia con castillos, torres y ríos, categoría Estrategia en equipo"
+                                     class="img-fluid object-fit-cover card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h5 card-title text-warning">Estrategia en equipo</h3>
+                                <p class="card-text">
+                                    Coordina tácticas con tu equipo de cinco y destruye la base rival
+                                    en partidas por llaves.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-info-subtle">
+                                <div class="mb-1">Modalidad: <span class="badge rounded-pill text-bg-info">Equipos de 5</span></div>
+                                <div>Cupos: <span class="badge rounded-pill text-bg-warning">8 equipos</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================== 4. PREMIOS ===================== -->
+        <section id="premios" class="bg-dark border-top border-bottom border-info border-opacity-25">
+            <div class="container py-4 py-lg-5">
+                <h2 class="fw-bold text-info border-start border-4 border-warning ps-3 mb-2">Premios</h2>
+                <p class="text-body-secondary mb-4">Se premia a los tres primeros lugares de cada categoría.</p>
+                <div class="row row-cols-1 row-cols-lg-3 g-4">
+
+                    <!-- 1.er lugar -->
+                    <div class="col order-lg-2">
+                        <article class="card h-100 bg-black border-warning border-2 overflow-hidden">
+                            <div class="row g-0 align-items-center h-100">
+                                <div class="col-4">
+                                    <div class="ratio ratio-1x1 bg-secondary">
+                                        <img src="images/premio-1.jpg"
+                                             alt="Trofeo dorado junto a un teclado y un mouse gamer"
+                                             class="img-fluid object-fit-cover">
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <span class="badge text-bg-warning mb-2">Oro</span>
+                                        <h3 class="h4 text-warning">1.er lugar</h3>
+                                        <p class="mb-0">Trofeo, kit gamer (teclado y mouse) y certificado de campeón.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- 2.º lugar -->
+                    <div class="col order-lg-1">
+                        <article class="card h-100 bg-black border-light border-2 overflow-hidden">
+                            <div class="row g-0 align-items-center h-100">
+                                <div class="col-4 order-2">
+                                    <div class="ratio ratio-1x1 bg-secondary">
+                                        <img src="images/premio-2.jpg"
+                                             alt="Medalla plateada junto a unos audífonos gamer"
+                                             class="img-fluid object-fit-cover">
+                                    </div>
+                                </div>
+                                <div class="col-8 order-1">
+                                    <div class="card-body">
+                                        <span class="badge text-bg-light mb-2">Plata</span>
+                                        <h3 class="h4">2.º lugar</h3>
+                                        <p class="mb-0">Medalla, audífonos gamer y certificado de subcampeón.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- 3.er lugar -->
+                    <div class="col order-lg-3">
+                        <article class="card h-100 bg-black border-secondary border-2 overflow-hidden">
+                            <div class="row g-0 align-items-center h-100">
+                                <div class="col-4">
+                                    <div class="ratio ratio-1x1 bg-secondary">
+                                        <img src="images/premio-3.jpg"
+                                             alt="Medalla de bronce junto a un mouse pad gamer"
+                                             class="img-fluid object-fit-cover">
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <span class="badge text-bg-secondary mb-2">Bronce</span>
+                                        <h3 class="h4">3.er lugar</h3>
+                                        <p class="mb-0">Medalla, mouse pad y certificado de participación destacada.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+
+                <div class="alert alert-warning mt-4 mb-0" role="note">
+                    <strong>Condiciones:</strong> los premios se entregan en la ceremonia de clausura, de forma
+                    presencial y previa presentación de la cédula o el carné universitario. Cada participante
+                    puede recibir un premio por categoría.
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================== 5. AUSPICIANTES ===================== -->
+        <section id="auspiciantes">
+            <div class="container py-4 py-lg-5">
+                <h2 class="fw-bold text-info border-start border-4 border-warning ps-3 mb-2">Auspiciantes</h2>
+                <p class="text-body-secondary mb-4">Gracias a quienes hacen posible el Gamer Fest ESPE 2027.</p>
+
+                <!--
+                    Móvil: uno por fila, imagen a la izquierda y texto a la derecha.
+                    Escritorio: tres por fila, imagen arriba y texto abajo.
+                -->
+                <div class="row row-cols-1 row-cols-lg-3 g-4">
+
+                    <!-- Auspiciante 1: ESPE -->
+                    <div class="col">
+                        <article class="card h-100 bg-dark border-secondary overflow-hidden">
+                            <div class="row g-0 align-items-center h-100">
+                                <div class="col-6 col-lg-12">
+                                    <div class="ratio ratio-21x9 bg-secondary">
+                                        <img src="images/ausp-espe.png"
+                                             alt="Escudo de la Universidad de las Fuerzas Armadas ESPE"
+                                             class="img-fluid object-fit-contain">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-12 text-lg-center">
+                                    <div class="card-body">
+                                        <h3 class="h5 mb-1">ESPE</h3>
+                                        <p class="small text-body-secondary mb-0">Sede y respaldo institucional</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Auspiciante 2 -->
+                    <div class="col">
+                        <article class="card h-100 bg-dark border-secondary overflow-hidden">
+                            <div class="row g-0 align-items-center h-100">
+                                <div class="col-6 col-lg-12">
+                                    <div class="ratio ratio-21x9 bg-secondary">
+                                        <img src="images/ausp-1.png" alt="Logotipo de PixelByte"
+                                             class="img-fluid object-fit-contain">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-12 text-lg-center">
+                                    <div class="card-body">
+                                        <h3 class="h5 mb-1">PixelByte</h3>
+                                        <p class="small text-body-secondary mb-0">Equipos y periféricos oficiales</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Auspiciante 3 -->
+                    <div class="col">
+                        <article class="card h-100 bg-dark border-secondary overflow-hidden">
+                            <div class="row g-0 align-items-center h-100">
+                                <div class="col-6 col-lg-12">
+                                    <div class="ratio ratio-21x9 bg-secondary">
+                                        <img src="images/ausp-2.png" alt="Logotipo de NeoLan Café"
+                                             class="img-fluid object-fit-contain">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-12 text-lg-center">
+                                    <div class="card-body">
+                                        <h3 class="h5 mb-1">NeoLan Café</h3>
+                                        <p class="small text-body-secondary mb-0">Café y snacks oficiales</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================== 6. UBICACION / MAPA ===================== -->
+        <section id="ubicacion" class="bg-dark border-top border-bottom border-info border-opacity-25">
+            <div class="container py-4 py-lg-5">
+                <h2 class="fw-bold text-info border-start border-4 border-warning ps-3 mb-4">¿Dónde será?</h2>
+
+                <div class="card bg-black border-info border-2 overflow-hidden">
+
+                    <!-- Mapa: ocupa el ancho del contenedor -->
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps?q=ESPE+Belisario+Quevedo+Latacunga&output=embed"
+                            title="Mapa del Campus Belisario Quevedo de la ESPE"
+                            allowfullscreen
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <!-- Respaldo textual  -->
+                    <div class="card-body">
+                        <h3 class="h5 text-warning">Campus Belisario Quevedo, ESPE</h3>
+                        <p>
+                            El Gamer Fest ESPE 2027 se realizará en el <strong>Campus Belisario Quevedo de la
+                            Universidad de las Fuerzas Armadas ESPE</strong>, en Latacunga. Habrá zonas de
+                            competencia, un escenario principal y un área de descanso para los participantes.
+                        </p>
+                        <ul class="list-unstyled mb-3">
+                            <li><span class="text-warning fw-bold">Dirección:</span> Campus Belisario Quevedo, ESPE · Latacunga, Cotopaxi</li>
+                            <li><span class="text-warning fw-bold">Acreditación:</span> desde las 08:30</li>
+                            <li><span class="text-warning fw-bold">Inicio de la jornada:</span> 09:00</li>
+                        </ul>
+                        <p class="small text-body-secondary mb-2">¿No carga el mapa? Ábrelo directamente en Google Maps.</p>
+                        <a class="btn btn-outline-info btn-sm"
+                           href="https://www.google.com/maps/search/?api=1&query=ESPE+Belisario+Quevedo+Latacunga"
+                           target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================== 7. INSCRIPCION ===================== -->
+        <section id="inscripcion">
+            <div class="container py-4 py-lg-5">
+                <h2 class="fw-bold text-info border-start border-4 border-warning ps-3 mb-2">Inscripción</h2>
+                <p class="text-body-secondary mb-4">
+                    Inscríbete hasta el 30 de abril de 2027 o hasta agotar los cupos de tu categoría.
+                </p>
+
+                <!-- Información previa  -->
+                <div class="accordion mb-4" id="infoInscripcion">
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#info1"
+                                    aria-expanded="true" aria-controls="info1">
+                                ¿Quiénes pueden participar?
+                            </button>
+                        </h3>
+                        <div id="info1" class="accordion-collapse collapse show" data-bs-parent="#infoInscripcion">
+                            <div class="accordion-body">
+                                Estudiantes, docentes y personal de la ESPE. Para inscribirte necesitas tu
+                                correo institucional (@espe.edu.ec).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#info2"
+                                    aria-expanded="false" aria-controls="info2">
+                                ¿Cuánto cuesta y cómo se paga?
+                            </button>
+                        </h3>
+                        <div id="info2" class="accordion-collapse collapse" data-bs-parent="#infoInscripcion">
+                            <div class="accordion-body">
+                                La inscripción cuesta $3 por jugador. Realiza el pago por transferencia o en
+                                la caja de la institución y adjunta una foto o un PDF del comprobante en el
+                                formulario.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#info3"
+                                    aria-expanded="false" aria-controls="info3">
+                                ¿Cómo confirmo mi inscripción?
+                            </button>
+                        </h3>
+                        <div id="info3" class="accordion-collapse collapse" data-bs-parent="#infoInscripcion">
+                            <div class="accordion-body">
+                                Una vez que revisemos tu comprobante, te escribiremos por WhatsApp para
+                                confirmar tu cupo. Llega el día del evento desde las 08:30 para acreditarte.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card bg-dark border-info border-2">
+                    <div class="card-body p-4">
+
+                        <h3 class="h5 text-warning mb-3">Formulario de inscripción</h3>
+
+                        <!--
+                        se completa en clase.
+                        -->
+                        <form>
+                            <div class="row g-3">
+
+                                <!-- Aquí van los campos -->
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ===================== PIE DE PAGINA / REDES ===================== -->
+    <footer class="bg-dark border-top border-info border-2 py-4">
+        <div class="container">
+            <div class="row align-items-center g-3 text-center text-lg-start">
+
+                <div class="col-12 col-lg-6">
+                    <p class="h5 text-info fw-bold mb-1">GAMER FEST ESPE 2027</p>
+                    <p class="small text-body-secondary mb-0">
+                        Torneo universitario de videojuegos · 15 de mayo de 2027 ·
+                        Campus Belisario Quevedo, ESPE · Latacunga
+                    </p>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <p class="fw-bold mb-2 text-lg-end">Síguenos en nuestras redes sociales:</p>
+
+                    <ul class="list-inline mb-0 text-lg-end">
+                        <li class="list-inline-item me-3">
+                            <a href="#" aria-label="Instagram de Gamer Fest ESPE 2027" title="Instagram">
+                                <img src="images/red-instagram.png" alt="Instagram" width="48" height="48">
+                            </a>
+                        </li>
+                        <li class="list-inline-item me-3">
+                            <a href="#" aria-label="Facebook de Gamer Fest ESPE 2027" title="Facebook">
+                                <img src="images/red-facebook.png" alt="Facebook" width="48" height="48" class="rounded-circle">
+                            </a>
+                        </li>
+                        <li class="list-inline-item me-0">
+                            <a href="#" aria-label="TikTok de Gamer Fest ESPE 2027" title="TikTok">
+                                <img src="images/red-tiktok.png" alt="TikTok" width="48" height="48" class="rounded-circle border border-secondary">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary">
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+                <p class="small text-body-secondary mb-0">© 2027 Gamer Fest ESPE. Todos los derechos reservados.</p>
+                <a href="#inicio" class="btn btn-outline-info btn-sm">Volver arriba</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
